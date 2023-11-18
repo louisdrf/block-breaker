@@ -5,6 +5,7 @@
 #ifndef PROJET_JEU_STRUCTS_H
 #define PROJET_JEU_STRUCTS_H
 #include <stdbool.h>
+#include "defines.h"
 
 
 typedef struct Platform {
@@ -46,8 +47,10 @@ typedef struct Map {
     unsigned short          width;
     Block                 **blocks;
     unsigned short          nbBlocks;
+    unsigned short          grid[WINDOW_H][WINDOW_W];
 
 } Map;
+
 
 typedef struct Player {
 
