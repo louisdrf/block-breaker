@@ -5,19 +5,18 @@
 #include <stdio.h>
 #include "../../headers/displays/display_menus.h"
 #include "../../headers/includes/colors.h"
+#include "../../headers/utils/utils.h"
 
 
-void display_init_menu() {
+int display_init_menu() {
 
-    display_menu_blocks();
-    //display_title();
+    display_title();
+    printf("\n\n%sPlay (1)%s        %sExit (0)%s \n" , GREEN, RESET, RED, RESET);
+    int choice = get_int();
+
+    return choice;
 }
 
-
-void display_menu_blocks() {
-
-    wprintf(L"\x263a");
-}
 
 void display_title() {
 

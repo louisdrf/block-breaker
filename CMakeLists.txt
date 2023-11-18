@@ -12,4 +12,7 @@ add_executable(projet_jeu
         headers/displays/display_menus.h
         headers/includes/colors.h
         sources/utils/set_unicode.c
-        headers/displays/utils/set_unicode.h)
+        headers/utils/set_unicode.h
+        sources/utils/utils.c
+        headers/utils/utils.h
+)

@@ -3,14 +3,18 @@
 //
 
 #include <stdio.h>
-#include "headers/displays/utils/set_unicode.h"
+#include "headers/utils/set_unicode.h"
 #include "headers/displays/display_menus.h"
 
+#define PLAY 1
+#define EXIT 0
 
 int main() {
 
     set_unicode_mode();
-    display_init_menu();
-    //launch_game();
+    if(display_init_menu() == PLAY)
+        launch_game();
+
+    else exit_game();
 
 }
