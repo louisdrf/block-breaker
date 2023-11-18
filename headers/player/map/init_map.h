@@ -7,9 +7,9 @@
 
 #include "../../includes/structs.h"
 
-Map* init_map();
+Map* init_map(int difficulty);
 void init_map_grid(Map *m);
-void init_map_blocks(Map *m);
+void init_map_blocks(Map *m, int block_resistance);
 
 void free_map(Map *m);
 

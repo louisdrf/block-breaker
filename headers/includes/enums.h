@@ -5,7 +5,7 @@
 #ifndef PROJET_JEU_ENUMS_H
 #define PROJET_JEU_ENUMS_H
 
-enum block_types {
+enum block_resistance {
     EASY,
     NORMAL,
     HARD

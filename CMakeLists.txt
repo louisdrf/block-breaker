@@ -25,4 +25,6 @@ add_executable(projet_jeu
         headers/player/ball/init_ball.h
         sources/player/map/init_map.c
         headers/player/map/init_map.h
+        sources/player/map/init_block.c
+        headers/player/map/init_block.h
 )
