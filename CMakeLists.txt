@@ -17,4 +17,6 @@ add_executable(projet_jeu
         headers/utils/utils.h
         sources/game/game.c
         headers/game/game.h
+        sources/player/init_player.c
+        headers/player/init_player.h
 )
