@@ -8,8 +8,7 @@
 
 void launch_game() {
 
-    init_player();
-    // init map, ball
+    Player *player = init_player();     // init player, platform, ball and map
 }
 
 

@@ -12,9 +12,11 @@
 int main() {
 
     set_unicode_mode();
-    if(display_init_menu() == PLAY)
-        launch_game();
 
-    else return EXIT_SUCCESS;
+    if(display_init_menu() == PLAY)
+        //launch_game();
+
+
+     return EXIT_SUCCESS;
 
 }

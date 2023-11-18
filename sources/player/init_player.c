@@ -7,6 +7,8 @@
 #include <stdio.h>
 #include "../../headers/player/init_player.h"
 #include "../../headers/player/platform/init_platform.h"
+#include "../../headers/player/ball/init_ball.h"
+#include "../../headers/player/map/init_map.h"
 
 Player *init_player() {
 
@@ -25,6 +27,7 @@ Player *init_player() {
     player->isPlaying   = true;
     player->platform    = init_platform();
     player->ball        = init_ball();
+    player->map         = init_map();
 
     return player;
 }

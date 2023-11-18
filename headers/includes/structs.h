@@ -46,7 +46,7 @@ typedef struct Map {
     unsigned short          height;
     unsigned short          width;
     Block                 **blocks;
-    unsigned short          nbBlocks;
+    int                     nbBlocks;
     unsigned short          grid[WINDOW_H][WINDOW_W];
 
 } Map;
@@ -62,6 +62,7 @@ typedef struct Player {
     unsigned short      nbBallsLeft;
     Platform           *platform;
     Ball               *ball;               // player currently used
+    Map                *map;
 
 } Player;
 
