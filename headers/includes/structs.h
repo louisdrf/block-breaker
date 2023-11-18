@@ -61,6 +61,7 @@ typedef struct Player {
     unsigned short      nbBalls;
     unsigned short      nbBallsLeft;
     Platform           *platform;
+    Ball               *ball;               // player currently used
 
 } Player;
 

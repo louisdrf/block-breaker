@@ -11,10 +11,24 @@ enum block_types {
     HARD
 };
 
+
 enum map_cells {
     VOID,
     BLOCK,
     BALL,
     PLATFORM
 };
+
+
+enum ball_speed {
+    SLOW,
+    MODERATE,
+    FAST
+};
+
+enum ball_strength {
+    WEAK,
+    STRONG
+};
+
 #endif //PROJET_JEU_ENUMS_H

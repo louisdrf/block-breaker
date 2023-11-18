@@ -4,12 +4,17 @@
 
 #include <stdlib.h>
 #include <string.h>
+#include <stdio.h>
 #include "../../../headers/player/platform/init_platform.h"
 
 
 Platform *init_platform() {
 
     Platform *p = malloc(sizeof(Platform));
+    if(p == NULL) {
+        fprintf(stderr, "Error while malloc Platform.");
+        exit(1);
+    }
 
     char *sprite = "---";
     p->sprite = malloc(strlen(sprite) + 1);

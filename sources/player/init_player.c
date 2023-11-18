@@ -6,10 +6,15 @@
 #include <string.h>
 #include <stdio.h>
 #include "../../headers/player/init_player.h"
+#include "../../headers/player/platform/init_platform.h"
 
 Player *init_player() {
 
     Player *player = malloc(sizeof(Player));
+    if(player == NULL) {
+        fprintf(stderr, "Error while malloc Player.");
+        exit(1);
+    }
 
     get_player_name(player);
 
@@ -18,7 +23,8 @@ Player *init_player() {
     player->nbBalls     = 3;
     player->nbBallsLeft = 3;
     player->isPlaying   = true;
-    player->platform    = NULL;
+    player->platform    = init_platform();
+    player->ball        = init_ball();
 
     return player;
 }

@@ -21,4 +21,6 @@ add_executable(projet_jeu
         headers/player/init_player.h
         sources/player/platform/init_platform.c
         headers/player/platform/init_platform.h
+        sources/player/ball/init_ball.c
+        headers/player/ball/init_ball.h
 )

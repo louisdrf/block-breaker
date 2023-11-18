@@ -3,11 +3,13 @@
 //
 
 #include "../../headers/game/game.h"
+#include "../../headers/player/init_player.h"
 
 
 void launch_game() {
-    // create player
-    // init map, ball and platform
+
+    init_player();
+    // init map, ball
 }
 
 
