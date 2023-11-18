@@ -40,7 +40,14 @@ typedef struct Block {
 } Block;
 
 
+typedef struct Map {
 
+    unsigned short          height;
+    unsigned short          width;
+    Block                 **blocks;
+    unsigned short          nbBlocks;
+
+} Map;
 
 typedef struct Player {
 
