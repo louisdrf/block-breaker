@@ -54,14 +54,15 @@ typedef struct Map {
 
 typedef struct Player {
 
-    bool                isPlaying;             // is the game running or not
-    char               *name;                 // player name
+    bool                isPlaying;              // is the game running or not
+    unsigned short      difficulty;             // chosen difficulty
+    char               *name;                   // player name
     int                 score;
     int                 highscore;
     unsigned short      nbBalls;
     unsigned short      nbBallsLeft;
     Platform           *platform;
-    Ball               *ball;               // player currently used
+    Ball               *ball;                   // player currently used
     Map                *map;
 
 } Player;

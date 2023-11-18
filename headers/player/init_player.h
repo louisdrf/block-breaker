@@ -8,6 +8,8 @@
 #include "../includes/structs.h"
 
 Player *init_player();
+
+void get_game_difficulty(Player *p);
 void get_player_name(Player *player);
 
 #endif //PROJET_JEU_INIT_PLAYER_H

@@ -9,6 +9,8 @@
 #include "../../headers/player/platform/init_platform.h"
 #include "../../headers/player/ball/init_ball.h"
 #include "../../headers/player/map/init_map.h"
+#include "../../headers/utils/utils.h"
+#include "../../headers/includes/colors.h"
 
 Player *init_player() {
 
@@ -19,6 +21,7 @@ Player *init_player() {
     }
 
     get_player_name(player);
+    get_game_difficulty(player);
 
     player->score       = 0;
     player->highscore   = 0;
@@ -33,8 +36,22 @@ Player *init_player() {
 }
 
 
+void get_game_difficulty(Player *p) {
+
+    clear();
+
+    printf("Chose game difficulty : \n\n");
+    printf(GREEN  "EASY   (1)\n"RESET);
+    printf(YELLOW "NORMAL (2)\n"RESET);
+    printf(RED    "HARD   (3)\n"RESET);
+
+    p->difficulty = get_int();
+}
+
 
 void get_player_name(Player *player) {
+
+    clear();
 
     char name[40];
 
