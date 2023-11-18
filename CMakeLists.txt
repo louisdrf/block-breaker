@@ -15,4 +15,6 @@ add_executable(projet_jeu
         headers/utils/set_unicode.h
         sources/utils/utils.c
         headers/utils/utils.h
+        sources/game/game.c
+        headers/game/game.h
 )

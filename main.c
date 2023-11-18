@@ -3,11 +3,11 @@
 //
 
 #include <stdio.h>
+#include <stdlib.h>
 #include "headers/utils/set_unicode.h"
 #include "headers/displays/display_menus.h"
 
 #define PLAY 1
-#define EXIT 0
 
 int main() {
 
@@ -15,6 +15,6 @@ int main() {
     if(display_init_menu() == PLAY)
         launch_game();
 
-    else exit_game();
+    else return EXIT_SUCCESS;
 
 }
