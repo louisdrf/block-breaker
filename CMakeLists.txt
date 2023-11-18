@@ -4,4 +4,6 @@ project(projet_jeu)
 set(CMAKE_CXX_STANDARD 17)
 
 add_executable(projet_jeu
-        main.c)
+        main.c
+        headers/defines.h
+        headers/structs.h)
