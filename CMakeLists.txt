@@ -29,4 +29,6 @@ add_executable(projet_jeu
         headers/player/map/init_block.h
         sources/displays/map/display_map.c
         headers/displays/map/display_map.h
+        loop.c
+        headers/loop.h
 )
