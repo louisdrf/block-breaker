@@ -7,8 +7,8 @@
 
 #include "../../includes/structs.h"
 
-Map* init_map(int difficulty);
-void init_map_grid(Map *m);
+void init_map(Player *player);
+void init_map_grid(Player *player);
 
 void free_map(Map *m);
 

@@ -30,7 +30,7 @@ Player *init_player() {
     player->isPlaying   = true;
     player->platform    = init_platform();
     player->ball        = init_ball();
-    player->map         = init_map(player->difficulty);
+    init_map(player);
 
     return player;
 }

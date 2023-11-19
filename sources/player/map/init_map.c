@@ -9,41 +9,42 @@
 #include "../../../headers/player/map/init_block.h"
 
 
-Map* init_map(int difficulty) {
+void init_map(Player *player) {
 
-    Map *m = malloc(sizeof(Map));
-    if(m == NULL) {
+    player->map = malloc(sizeof(Map));
+    if(player->map == NULL) {
         fprintf(stderr, "Error while malloc Map.");
         exit(1);
     }
 
-    m->height = WINDOW_H;
-    m->width = WINDOW_W;
+    player->map->height = WINDOW_H;
+    player->map->width = WINDOW_W;
 
-    m->nbBlocks = (m->height * m->width);
-    init_map_grid(m);
-
-    return m;
+    player->map->nbBlocks = (player->map->height * player->map->width);
+    init_map_grid(player);
 }
 
 
 /*
  * create INT map with 5 lines of blocks on top, platform and ball
  */
-void init_map_grid(Map *m) {
+void init_map_grid(Player *player) {
 
-    for(int i = 0; i < m->height; i++) {
-        for(int j = 0; j < m->width; j++) {
+    for(int i = 0; i < player->map->height; i++) {
+        for(int j = 0; j < player->map->width; j++) {
 
             if(i <= 5)
-                m->grid[i][j] = BLOCK;
+                player->map->grid[i][j] = BLOCK;
             else
-                m->grid[i][j] = VOID;
+                player->map->grid[i][j] = VOID;
+
+            if(j == 0 || j == player->map->width)
+                player->map->grid[i][j] = BORDER;
         }
     }
 
-    m->grid[m->height - 1][(m->width / 2) - 1] = PLATFORM;
-    m->grid[m->height - 2][(m->width / 2) - 1] = BALL;
+    player->map->grid[player->platform->y][player->platform->x] = PLATFORM;
+    player->map->grid[player->ball->y][player->ball->x] = BALL;
 
 }
 

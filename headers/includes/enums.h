@@ -16,7 +16,8 @@ enum map_cells {
     VOID,
     BLOCK,
     BALL,
-    PLATFORM
+    PLATFORM,
+    BORDER
 };
 
 
