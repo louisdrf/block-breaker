@@ -16,12 +16,12 @@ Platform *init_platform() {
         exit(1);
     }
 
-    char *sprite = "---";
+    char *sprite = "=====";
     p->sprite = malloc(strlen(sprite) + 1);
     strcpy(p->sprite, sprite);
 
-    p->x = (WINDOW_W / 2);
-    p->y = WINDOW_H;
+    p->x = (WINDOW_W / 2) - 1;
+    p->y = WINDOW_H - 1;
 
     return p;
 }

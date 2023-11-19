@@ -31,4 +31,6 @@ add_executable(projet_jeu
         headers/displays/map/display_map.h
         loop.c
         headers/loop.h
+        sources/player/platform/update_platform_pos.c
+        headers/player/platform/update_platform_pos.h
 )

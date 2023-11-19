@@ -4,9 +4,11 @@
 
 #include <conio.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include "headers/loop.h"
 #include "headers/displays/map/display_map.h"
 #include "headers/utils/utils.h"
+#include "headers/player/platform/update_platform_pos.h"
 
 #define LEFT 'K'
 #define RIGHT 'M'
@@ -24,12 +26,15 @@ void launch_loop(Player *player) {
 
         switch(move) {
             case LEFT:
-                // move platform on left
+                update_platform_pos(player, 0);
                 break;
 
             case RIGHT:
-                // move platform on right
+                update_platform_pos(player, 1);
                 break;
+
+            case 'q':
+                exit(1);
 
             default:
                 clear();
