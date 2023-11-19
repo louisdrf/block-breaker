@@ -5,7 +5,7 @@
 #ifndef PROJET_JEU_DEFINES_H
 #define PROJET_JEU_DEFINES_H
 
-#define WINDOW_H 32
-#define WINDOW_W 32
+#define WINDOW_H 24
+#define WINDOW_W 16
 
 #endif //PROJET_JEU_DEFINES_H

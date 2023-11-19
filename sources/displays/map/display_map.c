@@ -6,6 +6,7 @@
 #include "../../../headers/displays/map/display_map.h"
 #include "../../../headers/utils/utils.h"
 #include "../../../headers/includes/enums.h"
+#include "../../../headers/includes/colors.h"
 
 
 void display_map(Map *m) {
@@ -14,27 +15,32 @@ void display_map(Map *m) {
 
     for(int i = 0; i < m->height; i++) {
 
+        printf("| ");
+
         for(int j = 0; j < m->width; j++) {
 
             switch(m->grid[i][j]) {
 
                 case VOID:
-                    printf(" ");
+                    printf("     ");
                     break;
 
                 case BLOCK:
-                    printf("###");
+                    if(j % 2 == 0) printf(GREEN"|###|"RESET);
+                    if(j % 3 == 0) printf(RED"|###|"RESET);
+                    if(j % 4 == 0) printf(BLUE"|###|"RESET);
+                    else printf(YELLOW"|###|"RESET);
                     break;
 
                 case BALL:
-                    printf("o");
+                    printf("  o  ");
                     break;
 
                 case PLATFORM:
-                    printf("---");
+                    printf("=====");
                     break;
             }
         }
-        printf("\n");
+        printf(" |\n");
     }
 }
