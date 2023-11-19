@@ -38,7 +38,7 @@ void init_map_grid(Player *player) {
             else
                 player->map->grid[i][j] = VOID;
 
-            if(j == 0 || j == player->map->width)
+            if(j == 0 || j == (player->map->width - 1))
                 player->map->grid[i][j] = BORDER;
         }
     }

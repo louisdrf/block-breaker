@@ -9,6 +9,7 @@
 #include "headers/displays/map/display_map.h"
 #include "headers/utils/utils.h"
 #include "headers/player/platform/update_platform_pos.h"
+#include "headers/includes/colors.h"
 
 #define LEFT 'K'
 #define RIGHT 'M'
@@ -32,7 +33,6 @@ void launch_loop(Player *player) {
 
             case 'q':
                 exit(1);
-
         }
 
     }

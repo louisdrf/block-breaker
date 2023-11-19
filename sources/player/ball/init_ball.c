@@ -13,7 +13,7 @@ Ball *init_ball() {
 
     b->speed    = MODERATE;
     b->strength = WEAK;
-    b->x        = (WINDOW_W / 2) - 1;
+    b->x        = (WINDOW_W / 2) - 2;
     b->y        = WINDOW_H - 2;     // above player platform
 
     return b;

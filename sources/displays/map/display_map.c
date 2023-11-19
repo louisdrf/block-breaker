@@ -36,11 +36,11 @@ void display_map(Map *m) {
                     break;
 
                 case BALL:
-                    printf("  o  ");
+                    printf("     ");
                     break;
 
                 case PLATFORM:
-                    printf("=====");
+                    printf("     ");
                     break;
 
                 case BORDER:

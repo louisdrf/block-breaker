@@ -12,10 +12,14 @@
 
 void update_platform_pos(Player *player, int direction) {
 
-    if(player->platform->x == 1 && direction == LEFT)
-        return;
-    if(player->platform->x == (player->map->width) && direction == RIGHT)
-        return;
+   if(direction == LEFT) {
+       if(player->map->grid[player->platform->y][player->platform->x - 1] == BORDER)
+           return;
+   }
+    if(direction == RIGHT) {
+        if(player->map->grid[player->platform->y][player->platform->x + 1] == BORDER)
+            return;
+    }
 
 
     clearPreviousPos(player->platform->x, player->platform->y);
@@ -32,6 +36,6 @@ void update_platform_pos(Player *player, int direction) {
     }
 
     player->map->grid[player->platform->y][player->platform->x] = PLATFORM;
-    printf("\033[%d;%dH", player->platform->y, player->platform->x*5);
+    printf("\033[%d;%dH", player->platform->y, player->platform->x * BLOCK_SIZE);
     printf("=====");
 }

@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <conio.h>
 #include "../../headers/utils/utils.h"
+#include "../../headers/includes/defines.h"
 
 int get_int() {
     return (getch() - 48);
@@ -22,6 +23,6 @@ int random_int(int min, int max) {
 
 
 void clearPreviousPos(int x, int y) {
-    printf("\033[%d;%dH", y , x*5);
+    printf("\033[%d;%dH", y , x * BLOCK_SIZE);
     printf("     ");
 }

@@ -16,7 +16,7 @@ Platform *init_platform() {
         exit(1);
     }
 
-    p->x = (WINDOW_W / 2) - 1;
+    p->x = (WINDOW_W / 2) - 2;
     p->y = WINDOW_H - 1;
 
     return p;
