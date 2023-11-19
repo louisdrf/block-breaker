@@ -15,7 +15,7 @@ void display_map(Map *m) {
 
     for(int i = 0; i < m->height; i++) {
 
-        printf("| ");
+        printf("  |  ");
 
         for(int j = 0; j < m->width; j++) {
 
@@ -46,6 +46,6 @@ void display_map(Map *m) {
                     break;
             }
         }
-        printf(" |\n");
+        printf("  |  \n");
     }
 }

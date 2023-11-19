@@ -16,10 +16,6 @@ Platform *init_platform() {
         exit(1);
     }
 
-    char *sprite = "=====";
-    p->sprite = malloc(strlen(sprite) + 1);
-    strcpy(p->sprite, sprite);
-
     p->x = (WINDOW_W / 2) - 1;
     p->y = WINDOW_H - 1;
 
@@ -29,7 +25,5 @@ Platform *init_platform() {
 
 void free_platform(Platform *p) {
     if(p == NULL) return;
-
-    free(p->sprite);
     free(p);
 }

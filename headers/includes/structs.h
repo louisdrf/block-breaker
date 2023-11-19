@@ -10,7 +10,6 @@
 
 typedef struct Platform {
 
-    char                *sprite;            // platform sprite -> -----
     unsigned int         x;
     unsigned int         y;
 
@@ -20,7 +19,6 @@ typedef struct Platform {
 
 typedef struct Ball {
 
-    char                *sprite;            // ball sprite -> o
     unsigned int         x;
     unsigned int         y;
     int                  speed;

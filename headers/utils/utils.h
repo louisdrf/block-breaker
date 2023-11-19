@@ -7,5 +7,6 @@
 
 int get_int();
 void clear();
+void clearPreviousPos(int x, int y);
 
 #endif //PROJET_JEU_UTILS_H

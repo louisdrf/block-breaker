@@ -19,9 +19,6 @@ void launch_loop(Player *player) {
 
     while(player->isPlaying) {
 
-        clear();
-        display_map(player->map);
-
         move = getch();
 
         switch(move) {
@@ -36,10 +33,6 @@ void launch_loop(Player *player) {
             case 'q':
                 exit(1);
 
-            default:
-                clear();
-                printf("bad entry");
-                break;
         }
 
     }
