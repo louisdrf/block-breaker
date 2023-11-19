@@ -32,9 +32,9 @@ typedef struct Ball {
 
 typedef struct Block {
 
-    bool                    destroyed;      // is the block destroyed or not
-    unsigned short          lives;          // number of lives depending on the block type
-    unsigned short          block_resistance;     // difficulty to destroy : easy, moderate, hard...
+    bool                    destroyed;               // is the block destroyed or not
+    unsigned short          lives;                   // number of lives depending on the block type
+    unsigned short          block_resistance;        // difficulty to destroy : easy, moderate, hard...
     unsigned short          x;
     unsigned short          y;
 
@@ -45,7 +45,6 @@ typedef struct Map {
 
     unsigned short          height;
     unsigned short          width;
-    Block                ***blocks;
     int                     nbBlocks;
     unsigned short          grid[WINDOW_H][WINDOW_W];
 

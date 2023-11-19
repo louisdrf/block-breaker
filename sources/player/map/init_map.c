@@ -29,7 +29,7 @@ Map* init_map(int difficulty) {
 
 
 /*
- * create INT map with 5 lines of blocks on top
+ * create INT map with 5 lines of blocks on top, platform and ball
  */
 void init_map_grid(Map *m) {
 
@@ -43,32 +43,9 @@ void init_map_grid(Map *m) {
         }
     }
 
-    // place platform and ball
-}
+    m->grid[m->height - 1][m->width / 2] = PLATFORM;
+    m->grid[m->height - 2][m->width / 2] = BALL;
 
-void init_map_blocks(Map *m, int block_resistance) {
-
-    m->blocks = malloc(sizeof(Block *) * m->height);        // allocates two dimensions Blocks map
-    for(int i = 0; i < m->height; i++) {
-        m->blocks[i] = malloc(sizeof(Block));
-    }
-
-    for(int i = 0; i < m->height; i++) {
-        for(int j = 0; j < m->width; j++) {
-
-            switch(m->grid[i][j]) {
-
-                case VOID:
-                    m->blocks[i][j] = NULL;
-                    break;
-
-                case BLOCK:
-                    m->blocks[i][j] = init_block(block_resistance, j, i);           // j = pos x , i = pos y
-                    break;
-
-            }
-        }
-    }
 }
 
 
