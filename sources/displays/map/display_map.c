@@ -26,10 +26,15 @@ void display_map(Map *m) {
                     break;
 
                 case BLOCK:
-                    if(j % 2 == 0) printf(GREEN"|###|"RESET);
-                    if(j % 3 == 0) printf(RED"|###|"RESET);
-                    if(j % 4 == 0) printf(BLUE"|###|"RESET);
-                    else printf(YELLOW"|###|"RESET);
+                    if (j % 4 == 0) {
+                        printf(GREEN "|###|" RESET);
+                    } else if (j % 4 == 1) {
+                        printf(RED "|###|" RESET);
+                    } else if (j % 4 == 2) {
+                        printf(BLUE "|###|" RESET);
+                    } else {
+                        printf(YELLOW "|###|" RESET);
+                    }
                     break;
 
                 case BALL:

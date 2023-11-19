@@ -42,8 +42,8 @@ void init_map_grid(Map *m) {
         }
     }
 
-    m->grid[m->height - 1][m->width / 2] = PLATFORM;
-    m->grid[m->height - 2][m->width / 2] = BALL;
+    m->grid[m->height - 1][(m->width / 2) - 1] = PLATFORM;
+    m->grid[m->height - 2][(m->width / 2) - 1] = BALL;
 
 }
 
