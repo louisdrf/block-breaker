@@ -22,7 +22,6 @@ Map* init_map(int difficulty) {
 
     m->nbBlocks = (m->height * m->width);
     init_map_grid(m);
-    init_map_blocks(m, difficulty);
 
     return m;
 }

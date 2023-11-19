@@ -13,3 +13,8 @@ int get_int() {
 void clear() {
     system("cls");
 }
+
+int random_int(int min, int max) {
+
+    return rand() % (max + 1 - min) + min;
+}
