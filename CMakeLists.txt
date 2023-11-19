@@ -33,4 +33,7 @@ add_executable(projet_jeu
         headers/loop.h
         sources/player/platform/update_platform_pos.c
         headers/player/platform/update_platform_pos.h
+        sources/player/ball/move_ball.c
+        headers/player/ball/move_ball.h
+        sources/player/ball/ball_directions.h
 )

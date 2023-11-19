@@ -23,6 +23,7 @@ typedef struct Ball {
     unsigned int         y;
     int                  speed;
     int                  strength;
+    unsigned short       direction;
 
 } Ball;
 
